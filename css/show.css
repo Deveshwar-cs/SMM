@@ -62,3 +62,60 @@
 #shows .btn:hover {
   background-color: #27ae60;
 }
+
+#about {
+  background-color: #3a3a5c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.about-container {
+  background: rgba(255, 255, 255, 0.05); /* glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.right-about {
+  flex: 1 1 400px;
+}
+
+.right-about h2 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.right-about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #d6d6d6;
+}
+
+.left-about {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.left-about img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  border: 3px solid #2ecc71;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.left-about img:hover {
+  transform: scale(1.04);
+}
