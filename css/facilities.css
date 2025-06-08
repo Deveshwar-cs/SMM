@@ -1,0 +1,67 @@
+/* Facilities Section Styles - Dark Purple Theme */
+.facilities-section {
+  background: #1e1e2f;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.facilities-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.facility-card {
+  background: #2a2a3f;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #e0e0e0;
+}
+
+.facility-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.05);
+}
+
+.facility-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  filter: brightness(0.9);
+}
+
+.facility-card h3 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.facility-card p {
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+
+.ghost-card {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Optional: Fix columns on larger screens for balance */
+@media (min-width: 1000px) {
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
