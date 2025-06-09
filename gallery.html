@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <title>Gallery</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="logo">
+        <img src="images/logo4.png" alt="Logo" />
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+    <section class="gallery-section">
+      <div class="container">
+        <h1 class="section-title">Our Gallery</h1>
+        <div class="gallery-grid">
+          <img
+            src="images/hero.jpg"
+            alt="Gallery Image 1"
+            class="gallery-img"
+          />
+          <img
+            src="images/herosection.jpg"
+            alt="Gallery Image 2"
+            class="gallery-img"
+          />
+          <img
+            src="images/img3.jpg"
+            alt="Gallery Image 3"
+            class="gallery-img"
+          />
+          <img
+            src="images/img4.jpg"
+            alt="Gallery Image 4"
+            class="gallery-img"
+          />
+        </div>
+      </div>
+
+      <!-- Lightbox Modal -->
+      <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img
+          class="lightbox-img"
+          id="lightbox-img"
+          src=""
+          alt="Expanded Image"
+        />
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-wrap">
+        <div class="footer-info">
+          <img
+            src="images/logo4.png"
+            alt="MyTheatre Logo"
+            class="footer-logo"
+          />
+          <p>
+            Bringing stories to life for over 50 years. Join us to experience
+            unforgettable theatre moments.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#facilities">Facilities</a></li>
+            <li><a href="index.html#tickets">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Get in Touch</h4>
+          <p>
+            <strong>Phone:</strong>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:booking@theatrehub.com">booking@theatrehub.com</a>
+          </p>
+          <p><strong>Hours:</strong> 10 AM – 7 PM (All Days)</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 MyTheatre. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      const images = document.querySelectorAll(".gallery-img");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.querySelector(".close");
+
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "block";
+          lightboxImg.src = img.src;
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+
+      // Close lightbox on outside click
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

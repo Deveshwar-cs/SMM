@@ -9,7 +9,6 @@ html {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 200vh; /* to enable scrolling */
   /* background: linear-gradient(135deg, #2ecc71, #173022); */
   color: #fff;
 }
