@@ -85,6 +85,12 @@ body {
   border-radius: 10px;
 }
 
+@media (max-width: 768px) {
+  .lightbox-img {
+    margin-top: 50vw;
+  }
+}
+
 .close {
   position: absolute;
   top: 30px;
